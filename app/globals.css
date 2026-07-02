@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-sans), sans-serif;
+  --font-display: var(--font-display), sans-serif;
+  --font-mono: var(--font-mono), monospace;
+  
+  --color-accent-blue: #3B82F6;
+  --color-accent-purple: #8B5CF6;
+  --color-accent-cyan: #06B6D4;
+  --color-dark-bg: #0B0B0F;
+  --color-dark-card: #12121A;
+  --color-dark-border: rgba(255, 255, 255, 0.08);
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0B0F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1F1F2E;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2D2D44;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(18, 18, 26, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(24, 24, 37, 0.8);
+  border-color: rgba(139, 92, 246, 0.3);
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.15);
+}
+
+/* Custom glow backdrops */
+.glow-spot-purple {
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(139, 92, 246, 0) 70%);
+}
+
+.glow-spot-blue {
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(59, 130, 246, 0) 70%);
+}
+
+.glow-spot-cyan {
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.12) 0%, rgba(6, 182, 212, 0) 70%);
+}
+
+/* Custom text clip gradients */
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Masonry portfolio card aspect fixes */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+/* Performance and layout smoothing */
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Cursor Glow follow fallback support */
+.cursor-glow-element {
+  pointer-events: none;
+  background: radial-gradient(300px circle at var(--x) var(--y), rgba(139, 92, 246, 0.12), transparent 40%);
+}
+

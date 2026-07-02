@@ -1,0 +1,6 @@
+{
+  "name": "Aura Creative Agency",
+  "description": "A premium, award-winning digital creative agency crafting immersive experiences, brand identities, and high-performance web products.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
